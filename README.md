@@ -1,49 +1,16 @@
 
-## 使用方式：
-
-html:
-<html>
-<script src="(source)/h5Sound.js"></script>
-<body>
-<div id="audio"></div>
-</body>
-</html>
-
-js:
-var s = h5Sound({
-		element: document.getElementById('audio'), 
-		soundSrc: 'song.mp3', //声音文件地址
-		iconStyles: {         //图标css样式
-			width: '100px',
-			height: '100px'
-		},
-		onLoaded: function(){      //声音加载完成回调
-			console.log('加载完成');
-		}
-	});
-	document.getElementById('start').addEventListener('click', function(){
-		s.play();   //播放
-	});
-	document.getElementById('pause').addEventListener('click', function(){
-		s.pause();  //暂停
-	});
-	document.getElementById('stop').addEventListener('click', function(){
-		s.stop();   //停止
-	});
-
-
-##说明？
+## 说明
 
 * 支持微信H5背景声音自动播放
 * icon图标默认为左右排列的spring图,左边为播放图标，右边为停止播放图标
 
-##有问题反馈
+## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * 邮件(479573700@qq.com)
 * QQ: 479573700
 
-##关于作者
+## 关于作者
 * Anthan Wang
 
 ```javascript
