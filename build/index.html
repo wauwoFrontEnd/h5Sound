@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack Sample Project</title>
+  </head>
+  <body>
+    <div id="audio">
+    </div>
+    <button id="start">开始</button>
+    <button id="pause">暂停</button>
+    <button id="stop">停止</button>
+  </body>
+  <script src="h5Sound.js"></script>
+  <script>
+	
+(function(w, undefined){
+	'use strict';
+	var s = h5Sound({
+		element: document.getElementById('audio'),
+		soundSrc: 'song.mp3',
+		iconStyles: {
+			width: '200px',
+			height: '200px'
+		},
+		onLoaded: function(){
+			console.log('加载完成');
+		}
+	});
+	document.getElementById('start').addEventListener('click', function(){
+		s.play();
+	});
+	document.getElementById('pause').addEventListener('click', function(){
+		s.pause();
+	});
+	document.getElementById('stop').addEventListener('click', function(){
+		s.stop();
+	});
+	
+})(typeof window !== 'undefined' ? window : this);
+</script>
+</html>
